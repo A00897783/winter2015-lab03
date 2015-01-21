@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
- * Our quotes model has been autoloaded, because we use it everywhere.
+ * Creates page for 4th person's in database
  * 
  * controllers/Guess.php
  *
@@ -18,6 +17,9 @@ class Guess extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
+    /**
+     * creates a page for 4th person in database URL:dunno
+     */
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // get the data for fourth person

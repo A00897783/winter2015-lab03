@@ -3,6 +3,7 @@
 /**
  * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
  * Our quotes model has been autoloaded, because we use it everywhere.
+ * function shucks Create a page for 2nd person's page
  * 
  * controllers/Welcome.php
  *
@@ -31,9 +32,12 @@ class Welcome extends Application {
         $this->render();
     }
     
+    /**
+     * creates a page for 2nd person in database URL:lock/em/up
+     */
     function shucks(){
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // get the data for first person
+        // get the data for second person
         $id = 2;
         $source = $this->quotes->get($id);
         $this->data = array_merge($this->data, $source);

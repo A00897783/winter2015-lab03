@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Last person's page
- * Shows first data in database
+ * Creates a page for the last person in database
  * 
  * controllers/last/Welcome.php
  *

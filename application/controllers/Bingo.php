@@ -1,8 +1,7 @@
 <?php
 
 /**
- * Our homepage. Show a table of all the author pictures. Clicking on one should show their quote.
- * Our quotes model has been autoloaded, because we use it everywhere.
+ * Creates 6th person's page and 5th person's page.
  * 
  * controllers/Bingo.php
  *
@@ -18,6 +17,9 @@ class Bingo extends Application {
     //  The normal pages
     //-------------------------------------------------------------
 
+    /**
+     * show 5th person's data to wise/bingo
+     */
     function index() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // get the data for fifth person
@@ -28,9 +30,12 @@ class Bingo extends Application {
         $this->render(); 
     }
     
+    /**
+     * show 6th person's data to comp4711/wisdom
+     */
     function wisdom() {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
-        // get the data for fifth person
+        // get the data for sixth person
         $id = 6;
         $source = $this->quotes->get($id);
         $this->data = array_merge($this->data, $source);
